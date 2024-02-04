@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import LogoImage from '@/public/logo.webp'
 
-export default function Logo() {
+export function Logo() {
   return (
     <div className="flex flex-col items-center gap-y-4">
       <div className="overflow-hidden rounded-full">
