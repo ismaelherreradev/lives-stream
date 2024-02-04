@@ -22,39 +22,39 @@ export async function getRecommended() {
               id: userId,
             },
           },
-          // {
-          //   NOT: {
-          //     // followedBy: {
-          //     //   some: {
-          //     //     followerId: userId,
-          //     //   },
-          //     // },
-          //   },
-          // },
-          // {
-          //   NOT: {
-          //     // blocking: {
-          //     //   some: {
-          //     //     blockedId: userId,
-          //     //   },
-          //     // },
-          //   },
-          // },
+          {
+            NOT: {
+              // followedBy: {
+              //   some: {
+              //     followerId: userId,
+              //   },
+              // },
+            },
+          },
+          {
+            NOT: {
+              // blocking: {
+              //   some: {
+              //     blockedId: userId,
+              //   },
+              // },
+            },
+          },
         ],
       },
-      // include: {
-      //   stream: {
-      //     select: {
-      //       isLive: true,
-      //     },
-      //   },
-      // },
+      include: {
+        stream: {
+          select: {
+            isLive: true,
+          },
+        },
+      },
       orderBy: [
-        // {
-        //   stream: {
-        //     isLive: 'desc',
-        //   },
-        // },
+        {
+          stream: {
+            isLive: 'desc',
+          },
+        },
         {
           createdAt: 'desc',
         },
@@ -62,19 +62,19 @@ export async function getRecommended() {
     })
   } else {
     users = await db.user.findMany({
-      // include: {
-      //   stream: {
-      //     select: {
-      //       isLive: true,
-      //     },
-      //   },
-      // },
+      include: {
+        stream: {
+          select: {
+            isLive: true,
+          },
+        },
+      },
       orderBy: [
-        // {
-        //   stream: {
-        //     isLive: 'desc',
-        //   },
-        // },
+        {
+          stream: {
+            isLive: 'desc',
+          },
+        },
         {
           createdAt: 'desc',
         },
