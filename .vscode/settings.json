@@ -1,12 +1,16 @@
 {
   "editor.codeActionsOnSave": {
-    "quickfix.biome": "explicit",
-    "source.organizeImports.biome": "explicit"
+    "source.fixAll": "never",
+    "source.fixAll.eslint": "explicit"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+  "cssVariables.lookupFiles": ["**/GlobalStyles.tsx"],
+  "css.lint.unknownAtRules": "ignore",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
   }
 }
