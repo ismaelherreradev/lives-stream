@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <ClerkProvider appearance={{ baseTheme: dark }}>
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
-          <ThemeProvider attribute="class" forcedTheme='dark' storageKey='lives-stream'>
+          <ThemeProvider attribute="class" forcedTheme="dark" storageKey="lives-stream">
             {children}
           </ThemeProvider>
         </body>
