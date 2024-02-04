@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
+import { Toaster } from 'sonner'
 
 import './globals.css'
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
           <ThemeProvider attribute="class" forcedTheme="dark" storageKey="lives-stream">
+            <Toaster theme="light" position="bottom-center" />
             {children}
           </ThemeProvider>
         </body>
