@@ -18,5 +18,5 @@ export default async function CreatorPage({ params }: CreatorPageProps) {
     throw new Error('Unauthorized')
   }
 
-  return <div className="h-full">{user.id}</div>
+  return <div className="h-full">Creator page</div>
 }
