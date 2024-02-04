@@ -5,6 +5,8 @@ import { dark } from '@clerk/themes'
 
 import './globals.css'
 
+import { ThemeProvider } from '@/components/theme-provider'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -15,8 +17,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <ClerkProvider appearance={{ baseTheme: dark }}>
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
+      <html lang="en" suppressHydrationWarning>
+        <body className={inter.className}>
+          <ThemeProvider attribute="class" forcedTheme='dark' storageKey='lives-stream'>
+            {children}
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   )
