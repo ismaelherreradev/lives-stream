@@ -1,6 +1,6 @@
 {
   "editor.codeActionsOnSave": {
-    "quickfix.biome": true,
+    "quickfix.biome": "explicit",
     "source.organizeImports.biome": "explicit"
   },
   "[javascript]": {
