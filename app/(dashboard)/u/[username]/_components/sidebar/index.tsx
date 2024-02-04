@@ -1,6 +1,6 @@
-import { Toggle } from "./toggle";
-import { Wrapper } from "./wrapper";
-import { Navigation } from "./navigation";
+import { Navigation } from './navigation'
+import { Toggle } from './toggle'
+import { Wrapper } from './wrapper'
 
 export function Sidebar() {
   return (
@@ -8,5 +8,5 @@ export function Sidebar() {
       <Toggle />
       <Navigation />
     </Wrapper>
-  );
+  )
 }
