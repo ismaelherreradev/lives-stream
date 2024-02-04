@@ -5,13 +5,10 @@ import { User } from '@prisma/client'
 
 import { UserItem, UserItemSkeleton } from './user-item'
 
-// import { UserItem, UserItemSkeleton } from './user-item'
-
 type RecommendedProps = {
-  // data: (User & {
-  //   stream: { isLive: boolean } | null
-  // })[]
-  data: User[]
+  data: (User & {
+    stream: { isLive: boolean } | null
+  })[]
 }
 
 export function Recommended({ data }: RecommendedProps) {

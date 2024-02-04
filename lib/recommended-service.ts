@@ -24,20 +24,20 @@ export async function getRecommended() {
           },
           {
             NOT: {
-              // followedBy: {
-              //   some: {
-              //     followerId: userId,
-              //   },
-              // },
+              followedBy: {
+                some: {
+                  followerId: userId,
+                },
+              },
             },
           },
           {
             NOT: {
-              // blocking: {
-              //   some: {
-              //     blockedId: userId,
-              //   },
-              // },
+              blocking: {
+                some: {
+                  blockedId: userId,
+                },
+              },
             },
           },
         ],
