@@ -37,7 +37,7 @@ export function Toggle() {
   )
 }
 
-export const ToggleSkeleton = () => {
+export function ToggleSkeleton() {
   return (
     <div className="mb-2 hidden w-full items-center justify-between p-3 pl-6 lg:flex">
       <Skeleton className="h-6 w-[100px]" />
