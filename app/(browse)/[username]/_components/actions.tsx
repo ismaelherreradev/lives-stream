@@ -12,7 +12,7 @@ type ActionsProps = {
   userId: string
 }
 
-export const Actions = ({ isFollowing, userId }: ActionsProps) => {
+export function Actions({ isFollowing, userId }: ActionsProps) {
   const [isPending, startTransition] = useTransition()
 
   const handleFollow = () => {
